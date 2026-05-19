@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  
+  --color-gold-leaf: #C9A96E;
+  --color-sand: #F4F1ED;
+  --color-charcoal: #2C302E;
+  --color-sage: #848D82;
+  --color-muted-gray: #A1A1AA;
+  --color-surface-dim: #dcdad6;
+  --color-surface-bright: #fcf9f5;
+  --color-surface: #fcf9f5;
+  
+  --animate-shimmer: shimmer 1.5s infinite linear;
+  --animate-pulse-cta: pulseCta 3s infinite ease-in-out;
+
+  @keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+  }
+  @keyframes pulseCta {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.025); }
+  }
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .shimmer-bg {
+    background: linear-gradient(90deg, #ece9e6 25%, #f4f1ed 50%, #ece9e6 75%);
+    background-size: 200% 100%;
+  }
+
+  .shimmer-bg-dark {
+    background: linear-gradient(90deg, #2b2e2c 25%, #353b38 50%, #2b2e2c 75%);
+    background-size: 200% 100%;
+  }
+}
+

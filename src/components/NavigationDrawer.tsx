@@ -8,7 +8,7 @@ interface NavigationDrawerProps {
   setMenuOpen: (open: boolean) => void;
   isDarkMode: boolean;
   currentTab: string;
-  setCurrentTab: (tab: "home" | "shop" | "saved" | "search" | "admin") => void;
+  setCurrentTab: (tab: "home" | "shop" | "saved" | "search" | "admin" | "about" | "contact" | "privacy") => void;
   activeCategory: string;
   setActiveCategory: (cat: string) => void;
   setSelectedProductId: (id: string | null) => void;
@@ -51,7 +51,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
             }`}
           >
             <div className="flex justify-between items-center pb-6 border-b border-neutral-500/10">
-              <div className="font-serif text-2xl tracking-widest font-bold">CURATED SHOP</div>
+              <div className="font-serif text-2xl tracking-widest font-bold">CURATED</div>
               <button 
                 onClick={() => setMenuOpen(false)}
                 className="p-1 hover:bg-neutral-500/15 rounded-full"
@@ -62,7 +62,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
 
             {/* Navigation Links */}
             <nav className="flex-1 py-8 overflow-y-auto">
-              <ul className="flex flex-col space-y-5">
+              <ul className="flex flex-col space-y-4">
                 <li>
                   <button 
                     onClick={() => {
@@ -70,11 +70,11 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                       setSelectedProductId(null);
                       setMenuOpen(false);
                     }}
-                    className={`font-serif text-2xl text-left block w-full transition-all hover:translate-x-1.5 hover:text-gold-leaf ${
+                    className={`font-serif text-xl text-left block w-full transition-all hover:translate-x-1.5 hover:text-gold-leaf ${
                       currentTab === "home" ? "text-gold-leaf font-bold" : "text-current"
                     }`}
                   >
-                    Living Room & Explore
+                    Home Board
                   </button>
                 </li>
                 {CATEGORIES.slice(1).map((category, index) => (
@@ -86,7 +86,7 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                         setSelectedProductId(null);
                         setMenuOpen(false);
                       }}
-                      className={`font-serif text-2xl text-left block w-full transition-all hover:translate-x-1.5 hover:text-gold-leaf ${
+                      className={`font-serif text-xl text-left block w-full transition-all hover:translate-x-1.5 hover:text-gold-leaf ${
                         currentTab === "shop" && activeCategory === category 
                           ? "text-gold-leaf font-bold" 
                           : "text-current"
@@ -103,25 +103,77 @@ export const NavigationDrawer: React.FC<NavigationDrawerProps> = ({
                       setSelectedProductId(null);
                       setMenuOpen(false);
                     }}
-                    className="font-serif text-2xl text-left text-current block w-full transition-all hover:translate-x-1.5 hover:text-gold-leaf font-medium"
+                    className={`font-serif text-xl text-left block w-full transition-all hover:translate-x-1.5 hover:text-gold-leaf ${
+                      currentTab === "saved" ? "text-gold-leaf font-bold" : "text-current"
+                    }`}
                   >
                     Saved ({savedProductIdsCount})
                   </button>
+                </li>
+                
+                <li className="pt-4 border-t border-neutral-500/10">
+                  <div className="text-[10px] uppercase tracking-widest font-bold font-mono opacity-50 mb-2">Information</div>
+                  <ul className="space-y-2">
+                    <li>
+                      <button
+                        onClick={() => {
+                          setCurrentTab("about");
+                          setSelectedProductId(null);
+                          setMenuOpen(false);
+                        }}
+                        className="font-sans text-sm text-left block w-full hover:text-gold-leaf"
+                      >
+                        About Us
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => {
+                          setCurrentTab("contact");
+                          setSelectedProductId(null);
+                          setMenuOpen(false);
+                        }}
+                        className="font-sans text-sm text-left block w-full hover:text-gold-leaf"
+                      >
+                        Contact Us
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        onClick={() => {
+                          setCurrentTab("privacy");
+                          setSelectedProductId(null);
+                          setMenuOpen(false);
+                        }}
+                        className="font-sans text-sm text-left block w-full hover:text-gold-leaf"
+                      >
+                        Privacy Policy
+                      </button>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </nav>
 
             <div className="pt-6 border-t border-neutral-500/10 text-xs text-opacity-70 leading-relaxed font-mono space-y-4">
+              <a 
+                href="https://tr.pinterest.com/zenhomeorganizer/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="block text-center bg-[#E60023] hover:bg-[#ad001a] text-white text-xs font-sans font-bold py-2 px-4 rounded transition-colors"
+              >
+                Follow us on Pinterest
+              </a>
               <div 
                 onClick={() => {
                   setShowDisclaimerBubble(true);
                   setMenuOpen(false);
                 }}
-                className="bg-gold-leaf/10 p-3.5 rounded border border-gold-leaf/20 cursor-pointer hover:bg-gold-leaf/20 text-current font-sans text-center tracking-normal font-medium leading-normal"
+                className="bg-gold-leaf/10 p-3 rounded border border-gold-leaf/20 cursor-pointer hover:bg-gold-leaf/20 text-current font-sans text-center tracking-normal font-medium leading-normal text-[10px]"
               >
-                📣 We are an Amazon Associate. We may earn a small commission on purchases made through our referral links, at no extra cost to you.
+                📣 As an Amazon Associate I earn from qualifying purchases.
               </div>
-              <div>© 2026 CURATED COLLECTIVE</div>
+              <div className="text-[9px] text-center">© 2026 CURATED COLLECTIVE</div>
             </div>
           </motion.div>
         </div>

@@ -72,11 +72,11 @@ export const StickyMobileCta: React.FC<StickyMobileCtaProps> = ({
               <a 
                 href={getAffiliateLink(activeStickyProduct.name, activeStickyProduct.designer)}
                 target="_blank" 
-                rel="noopener noreferrer"
+                rel="sponsored nofollow"
                 referrerPolicy="no-referrer"
                 className="bg-gold-leaf text-white font-sans text-[10px] font-bold tracking-widest px-4.5 py-3 rounded-xl uppercase flex items-center gap-1.5 transition-all shadow-md active:scale-95 animate-pulse-cta text-center"
               >
-                BUY NOW <ExternalLink className="w-3 h-3 text-white" />
+                CHECK PRICE <ExternalLink className="w-3 h-3 text-white" />
               </a>
 
               {/* Retract button */}

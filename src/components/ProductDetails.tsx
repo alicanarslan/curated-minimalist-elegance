@@ -218,7 +218,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
               referrerPolicy="no-referrer"
               className="w-full bg-charcoal hover:bg-neutral-900 text-sand hover:text-white dark:bg-neutral-200 dark:hover:bg-neutral-300 dark:text-charcoal font-sans text-xs font-bold tracking-widest py-4 rounded uppercase flex justify-center items-center gap-2.5 transition-all outline-none duration-300 text-center shadow-md shadow-black/10 transition-colors"
             >
-              GO TO AMAZON TO BUY <ExternalLink className="w-4 h-4 opacity-75" />
+              CHECK PRICE ON AMAZON <ExternalLink className="w-4 h-4 opacity-75" />
             </a>
 
             <div className="flex items-center justify-between text-[9px] text-muted-gray uppercase tracking-widest font-mono border-t border-neutral-500/10 pt-3">

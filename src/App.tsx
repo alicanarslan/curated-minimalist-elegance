@@ -21,6 +21,7 @@ import { Footer } from "./components/Footer";
 import { StickyMobileCta } from "./components/StickyMobileCta";
 import { AffiliateDisclosure } from "./components/AffiliateDisclosure";
 import { AdminDashboard } from "./components/AdminDashboard";
+import { LegalPages } from "./components/LegalPages";
 
 export default function App() {
   // Theme state
@@ -82,8 +83,8 @@ export default function App() {
     window.history.pushState({}, "", `/go/${asin}`);
   };
 
-  // Navigation / screen states (extended with "admin")
-  const [currentTab, setCurrentTab] = useState<"home" | "shop" | "saved" | "search" | "admin">("home");
+  // Navigation / screen states (extended with "admin" and legal)
+  const [currentTab, setCurrentTab] = useState<"home" | "shop" | "saved" | "search" | "admin" | "about" | "contact" | "privacy">("home");
   const [selectedProductId, setSelectedProductId] = useState<string | null>(null);
   const [activeCategory, setActiveCategory] = useState<string>("All");
   
@@ -203,6 +204,59 @@ export default function App() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Dynamic Page Title & OpenGraph Metadata Updater for Amazon Associate approval
+  useEffect(() => {
+    let title = "CURATED - Minimalist Home, Lighting & Decor Inspiration";
+    let desc = "Discover curated minimalist home decor, office aesthetics, and architectural lighting inspired by Pinterest boards.";
+    let image = "https://lh3.googleusercontent.com/aida-public/AB6AXuCn8D3rpZzzo8bm9FQPWiuq3ZfCnfymxYMxEAeLBGtzRIrb4dvoplXMdGmKKWo-D9mF-fpWnK1wlfXTV0Ahb6rtTzBSBX57s5kXwNl8Zih66VdEDDRa8dFYlwBrFMTJjmMWuPuyRrvz4Y4DdVNb2H1Isj-tNKTNuvq7UmLkwm5kEAx77rUkek9I8L-cm2Ab3vmtAPK6BLqxzVD6wVJlspfHbAbYcw7r6PI_AAD-1JPBD3U9cC-Nwrxp6YREXSINJKZo21HyppotS4T8";
+    
+    if (selectedProductId) {
+      const prod = productsList.find(p => p.id === selectedProductId);
+      if (prod) {
+        title = `${prod.name} by ${prod.designer} - CURATED`;
+        desc = prod.description;
+        image = prod.imageUrl || (prod.colorSwatches[0]?.images[0]) || image;
+      }
+    } else if (currentTab === "shop") {
+      title = `${activeCategory} Design Catalog - CURATED`;
+    } else if (currentTab === "saved") {
+      title = "Your Saved Inspiration Boards - CURATED";
+    } else if (currentTab === "about") {
+      title = "About Us - CURATED Design Studio";
+    } else if (currentTab === "contact") {
+      title = "Contact Us - CURATED Design Studio";
+    } else if (currentTab === "privacy") {
+      title = "Privacy Policy - CURATED";
+    }
+
+    document.title = title;
+
+    // Helper to dynamically update HTML meta tags
+    const setMetaTag = (property: string, content: string) => {
+      let element = document.querySelector(`meta[property="${property}"]`) || document.querySelector(`meta[name="${property}"]`);
+      if (!element) {
+        element = document.createElement("meta");
+        if (property.startsWith("og:") || property.startsWith("twitter:")) {
+          element.setAttribute("property", property);
+        } else {
+          element.setAttribute("name", property);
+        }
+        document.head.appendChild(element);
+      }
+      element.setAttribute("content", content);
+    };
+
+    setMetaTag("description", desc);
+    setMetaTag("og:title", title);
+    setMetaTag("og:description", desc);
+    setMetaTag("og:image", image);
+    setMetaTag("og:url", window.location.href);
+    setMetaTag("twitter:card", "summary_large_image");
+    setMetaTag("twitter:title", title);
+    setMetaTag("twitter:description", desc);
+    setMetaTag("twitter:image", image);
+  }, [selectedProductId, currentTab, activeCategory, productsList]);
 
   // Helper functions scoped to the active product color swatch
   const getProductActiveImage = (product: Product, index: number = 0) => {
@@ -355,9 +409,9 @@ export default function App() {
                   href={targetLink}
                   target="_blank"
                   rel="sponsored nofollow"
-                  className="w-full bg-neutral-900 border border-neutral-800 text-sand hover:bg-neutral-850 dark:bg-white dark:border-transparent dark:text-charcoal dark:hover:bg-neutral-100 font-sans text-xs font-bold tracking-widest py-3 rounded uppercase text-center transition-colors"
+                  className="w-full bg-neutral-900 border border-neutral-850 text-sand hover:bg-neutral-850 dark:bg-white dark:border-transparent dark:text-charcoal dark:hover:bg-neutral-100 font-sans text-xs font-bold tracking-widest py-3 rounded uppercase text-center transition-colors"
                 >
-                  Go to Amazon Now
+                  Check Price on Amazon
                 </a>
                 <button 
                   onClick={() => {
@@ -571,6 +625,14 @@ export default function App() {
                     isDarkMode={isDarkMode}
                   />
                 </div>
+              )}
+
+              {(currentTab === "about" || currentTab === "contact" || currentTab === "privacy") && (
+                <LegalPages
+                  initialSection={currentTab}
+                  onBack={() => setCurrentTab("home")}
+                  isDarkMode={isDarkMode}
+                />
               )}
             </motion.div>
           )}

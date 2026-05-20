@@ -136,7 +136,7 @@ export function ProductCard({
             onClick={(e) => onRedirect(product.asin, product.affiliateLink, e)}
             className="w-full bg-neutral-900 dark:bg-neutral-800 text-white hover:bg-neutral-800 dark:hover:bg-neutral-700 font-sans text-[10px] font-bold tracking-widest py-2.5 rounded uppercase flex items-center justify-center gap-1.5 transition-colors"
           >
-            VIEW ON AMAZON <ExternalLink className="w-3.5 h-3.5 text-neutral-400" />
+            CHECK PRICE ON AMAZON <ExternalLink className="w-3.5 h-3.5 text-neutral-400" />
           </button>
 
           <div className="flex justify-between items-center text-[8px] text-neutral-450 mt-2.5 uppercase tracking-widest font-mono">

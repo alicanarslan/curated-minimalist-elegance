@@ -42,7 +42,7 @@ export const StickyMobileCta: React.FC<StickyMobileCtaProps> = ({
             
             {/* Floating scarcity node indicator */}
             <div className="absolute -top-3 left-4 bg-rose-500 text-white font-sans text-[8px] px-2 py-0.5 rounded-full tracking-widest uppercase font-bold animate-pulse-cta border border-white/20">
-              🔥 ONLY 2 LEFT • 24% SAVINGS
+              🔥 ONLY 2 LEFT
             </div>
 
             {/* Thumbnail and title details */}
@@ -62,8 +62,7 @@ export const StickyMobileCta: React.FC<StickyMobileCtaProps> = ({
               <div>
                 <h4 className="font-serif text-[13px] font-bold line-clamp-1 pr-2 leading-tight">{activeStickyProduct.name}</h4>
                 <div className="flex items-center gap-1.5 mt-0.5">
-                  <span className="text-xs font-bold text-gold-leaf">${activeStickyProduct.price}</span>
-                  <span className="text-[10px] text-muted-gray line-through">${Math.round(activeStickyProduct.price * 1.3)}</span>
+                  <span className="text-[10px] text-[#222] dark:text-neutral-400 uppercase tracking-widest font-bold font-mono">Prime Fast</span>
                 </div>
               </div>
             </div>

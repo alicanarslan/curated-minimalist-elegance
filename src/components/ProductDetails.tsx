@@ -159,12 +159,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
             Design & Architecture: <span className="font-semibold text-gold-leaf">{product.designer}</span>
           </p>
 
-          {/* Special Price Display (Scarcity layout) */}
-          <div className="flex items-baseline gap-3 mb-6 p-4 rounded-lg bg-neutral-500/5 border border-neutral-500/10">
-            <span className="font-sans text-3xl font-bold text-gold-leaf">${product.price}</span>
-            <span className="font-sans text-sm text-muted-gray line-through">${Math.round(product.price * 1.3)}</span>
-            <span className="font-sans text-[11px] bg-rose-500 text-white font-bold px-2 py-0.5 rounded uppercase font-mono">-%24 SAVINGS</span>
-          </div>
+
 
           {/* Active Color selected bubble bar */}
           {product.colorSwatches.length > 1 && (
@@ -300,7 +295,6 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({
               </div>
               <h4 className="font-serif text-base font-bold group-hover:text-gold-leaf transition-colors line-clamp-1">{item.name}</h4>
               <div className="flex items-center gap-2 mt-1">
-                <span className="text-sm font-bold text-gold-leaf">${item.price}</span>
                 <span className="text-xs text-rose-500 font-semibold uppercase tracking-wider font-mono text-[10px]">Prime Fast</span>
               </div>
             </div>

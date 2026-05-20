@@ -69,7 +69,7 @@ export const HomeTab: React.FC<HomeTabProps> = ({
               {/* Card Tooltip */}
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 xs:max-w-xs w-48 bg-charcoal/90 backdrop-blur-md rounded border border-gold-leaf/30 text-sand p-2.5 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 scale-95 group-hover:scale-100 shadow-xl">
                 <h4 className="font-serif text-xs font-bold leading-tight">Velvet Accent Chair</h4>
-                <p className="font-sans text-[10px] text-gold-leaf font-bold mt-0.5">$249 <span className="text-white font-normal text-opacity-70">Atelier Reserve</span></p>
+                <p className="font-sans text-[10px] text-gold-leaf font-bold mt-0.5"><span className="text-white font-normal text-opacity-70">Atelier Reserve</span></p>
                 <button className="text-[9px] font-sans font-bold flex items-center gap-1 mt-1.5 uppercase text-gold-leaf underline">
                   View Now <ChevronRight className="w-3 h-3" />
                 </button>
@@ -91,7 +91,7 @@ export const HomeTab: React.FC<HomeTabProps> = ({
               />
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-48 bg-charcoal/90 backdrop-blur-md rounded border border-gold-leaf/30 text-sand p-2.5 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 scale-95 group-hover:scale-100 shadow-xl">
                 <h4 className="font-serif text-xs font-bold leading-tight">Minimalist Floor Lamp</h4>
-                <p className="font-sans text-[10px] text-gold-leaf font-bold mt-0.5">$129 <span className="text-white font-normal text-opacity-70">Lumina Brass</span></p>
+                <p className="font-sans text-[10px] text-gold-leaf font-bold mt-0.5"><span className="text-white font-normal text-opacity-70">Lumina Brass</span></p>
                 <button className="text-[9px] font-sans font-bold flex items-center gap-1 mt-1.5 uppercase text-gold-leaf underline">
                   View Now <ChevronRight className="w-3 h-3" />
                 </button>
@@ -113,7 +113,7 @@ export const HomeTab: React.FC<HomeTabProps> = ({
               />
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-48 bg-charcoal/90 backdrop-blur-md rounded border border-gold-leaf/30 text-sand p-2.5 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 scale-95 group-hover:scale-100 shadow-xl">
                 <h4 className="font-serif text-xs font-bold leading-tight">Statement Space Chair</h4>
-                <p className="font-sans text-[10px] text-gold-leaf font-bold mt-0.5">$1250 <span className="text-white font-normal text-opacity-70">Boucle Atelier</span></p>
+                <p className="font-sans text-[10px] text-gold-leaf font-bold mt-0.5"><span className="text-white font-normal text-opacity-70">Boucle Atelier</span></p>
                 <button className="text-[9px] font-sans font-bold flex items-center gap-1 mt-1.5 uppercase text-gold-leaf underline">
                   View Now <ChevronRight className="w-3 h-3" />
                 </button>

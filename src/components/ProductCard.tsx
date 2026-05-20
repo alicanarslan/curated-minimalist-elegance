@@ -109,10 +109,7 @@ export function ProductCard({
 
         <div className="mt-4 pt-3.5 border-t border-neutral-200 dark:border-neutral-800">
           <div className="flex justify-between items-baseline mb-3.5">
-            <span className="font-sans text-base font-extrabold text-neutral-700 dark:text-neutral-200">
-              ${product.price}
-            </span>
-            <span className="font-sans text-[9px] text-[#222] dark:text-neutral-400 uppercase tracking-widest font-bold">
+            <span className="font-sans text-[10px] text-[#222] dark:text-neutral-400 uppercase tracking-widest font-semibold">
               Prime Verified
             </span>
           </div>

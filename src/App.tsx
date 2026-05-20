@@ -183,7 +183,7 @@ export default function App() {
       
       const t = setTimeout(() => {
         window.location.href = destination;
-      }, 1600);
+      }, 800);
       return () => clearTimeout(t);
     }
   }, [redirectAsin, productsList]);
@@ -339,10 +339,10 @@ export default function App() {
         : "bg-surface text-charcoal"
       } transition-colors duration-500 flex flex-col overflow-x-hidden`}
     >
-      {/* SECURE CLOAKED REDIRECTION SPLASH CARD OVERLAY */}
+      {/* MINIMALIST REDIRECT OVERLAY */}
       {redirectAsin && (() => {
         const foundProduct = productsList.find(p => p.asin.toUpperCase() === redirectAsin.toUpperCase());
-        const targetTitle = foundProduct ? foundProduct.name : `Verifying Product ASIN: ${redirectAsin}`;
+        const targetTitle = foundProduct ? foundProduct.name : "Product Page";
         const targetImage = foundProduct ? (foundProduct.imageUrl || foundProduct.colorSwatches[0]?.images[0]) : "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&q=80&w=200";
         const targetLink = foundProduct ? foundProduct.affiliateLink : `https://www.amazon.com/dp/${redirectAsin}?tag=curatedpin-20`;
         return (
@@ -351,75 +351,58 @@ export default function App() {
           }`}>
             <div className="max-w-md w-full text-center flex flex-col items-center gap-6">
               {/* Rotating minimalist loader visual */}
-              <div className="relative w-16 h-16">
-                <div className="absolute inset-0 rounded-full border-2 border-neutral-500/15" />
-                <div className="absolute inset-0 rounded-full border-2 border-t-gold-leaf animate-spin" />
+              <div className="relative w-12 h-12">
+                <div className="absolute inset-0 rounded-full border border-neutral-500/15" />
+                <div className="absolute inset-0 rounded-full border border-t-neutral-800 dark:border-t-white animate-spin" />
               </div>
 
               <div>
-                <span className="font-sans text-[10px] tracking-widest uppercase font-extrabold text-gold-leaf block mb-1">
-                  Secure Link Cloaking Verified
-                </span>
-                <h2 className="font-serif text-2xl font-bold tracking-tight mb-2">
-                  Connecting Securely to Amazon...
+                <h2 className="font-serif text-xl font-bold tracking-tight mb-1.5">
+                  Opening Amazon...
                 </h2>
-                <p className="text-xs text-neutral-400 leading-relaxed max-w-xs mx-auto">
-                  Applying Amazon associate recommendation parameters. Stand by, we are forwarding you to the official checkout portal.
+                <p className="text-xs text-neutral-450 leading-relaxed max-w-xs mx-auto">
+                  Directing you to the official product store. Stand by, we are forwarding your browser.
                 </p>
               </div>
 
-              {/* Verified Product Thumbnail details card */}
-              <div className={`w-full p-4 rounded-xl border flex items-center gap-4 text-left ${
+              {/* Product Thumbnail details card */}
+              <div className={`w-full p-4 rounded-lg border flex items-center gap-4 text-left ${
                 isDarkMode ? "bg-white/5 border-white/5 text-white" : "bg-white border-neutral-200 text-charcoal"
               }`}>
-                <div className="w-14 h-18 rounded overflow-hidden bg-surface shrink-0 border border-neutral-500/10">
+                <div className="w-12 h-15 rounded overflow-hidden bg-surface shrink-0 border border-neutral-500/10">
                   <img src={targetImage} alt={targetTitle} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
                 </div>
                 <div>
                   <h4 className="font-serif text-sm font-bold line-clamp-1 leading-tight">{targetTitle}</h4>
-                  <p className="font-mono text-[9px] text-neutral-400 mt-1 uppercase tracking-wider">
-                    ASIN: {redirectAsin} • SECURED PIN LINK
-                  </p>
-                  <p className="text-[10px] text-emerald-500 font-bold font-sans mt-0.5">
-                    ✓ Verified Prime Sourcing
+                  <p className="text-[10px] text-neutral-450 dark:text-neutral-400 mt-1 font-sans">
+                    Official Product Store Sourced
                   </p>
                 </div>
-              </div>
-
-              {/* Visual loading log lines */}
-              <div className="w-full font-mono text-[9px] text-neutral-450 bg-neutral-500/5 py-3.5 px-4 rounded space-y-1.5 text-left">
-                <div className="flex items-center justify-between text-neutral-400">
-                  <span>► INBOUND REDIRECT STATUS:</span>
-                  <span className="text-emerald-500 font-bold uppercase tracking-wider">RESOLVED</span>
-                </div>
-                <div>LOG: Parsing affiliate parameters tracking click...</div>
-                <div>LOG: Cloaking B0_DP path parameters successfully.</div>
-                <div>LOG: Injecting Amazon.com sponsored attributes.</div>
               </div>
 
               {/* Compliance note */}
               <div className="mt-2 text-[10px] px-4 font-sans leading-normal text-neutral-400">
-                <strong>Legal Affiliate Notice:</strong> As an Amazon Associate I earn from qualifying purchases. This secure connection supports curation visual boards.
+                * As an Amazon Associate, we earn from qualifying purchases. This support allows us to continue our independent styling curation.
               </div>
 
               {/* Safe fallback link */}
-              <div className="mt-4 flex flex-col gap-2 w-full">
+              <div className="mt-2 flex flex-col gap-2 w-full">
                 <a 
                   href={targetLink}
                   target="_blank"
                   rel="sponsored nofollow"
-                  className="w-full bg-neutral-900 border border-neutral-800 text-white font-sans text-xs font-bold tracking-widest py-3.5 rounded uppercase text-center"
+                  className="w-full bg-neutral-900 border border-neutral-800 text-sand hover:bg-neutral-850 dark:bg-white dark:border-transparent dark:text-charcoal dark:hover:bg-neutral-100 font-sans text-xs font-bold tracking-widest py-3 rounded uppercase text-center transition-colors"
                 >
-                  Click here to proceed immediately
+                  Go to Amazon Now
                 </a>
                 <button 
                   onClick={() => {
                     setRedirectAsin(null);
                     window.history.pushState({}, "", "/");
                   }}
-                  className="text-xs text-neutral-400 hover:text-neutral-500 underline py-2 mt-1"
+                  className="text-xs text-neutral-450 hover:text-neutral-600 dark:text-neutral-400 dark:hover:text-neutral-350 underline py-2 mt-1 transition-colors"
                 >
-                  Cancel Connection
+                  Return to Curated
                 </button>
               </div>
             </div>
@@ -1013,18 +996,19 @@ export default function App() {
                           </p>
                         </div>
 
-                        {/* Amazon high conversion redirect card (Pulsing trigger) */}
-                        <div className="p-5 rounded-lg border border-gold-leaf/40 bg-gold-leaf/10 relative overflow-hidden flex flex-col gap-4.5 mb-8 animate-pulse-cta shadow-[0_4px_20px_rgba(201,169,110,0.1)]">
-                          
+                        {/* Amazon Product Purchase Info card */}
+                        <div className={`p-5 rounded-lg border flex flex-col gap-4 mb-6 ${
+                          isDarkMode ? "bg-neutral-900/40 border-neutral-850" : "bg-neutral-50/50 border-neutral-200"
+                        }`}>
                           <div className="flex items-center gap-2 justify-between">
-                            <div className="flex items-center gap-2 font-sans text-xs uppercase tracking-widest font-bold text-gold-leaf">
-                              <Sparkles className="w-4 h-4 text-gold-leaf animate-spin duration-[7s]" /> Secure Amazon Redirection
+                            <div className="flex items-center gap-2 font-sans text-[10px] uppercase tracking-widest font-bold text-neutral-450 dark:text-neutral-400">
+                              Official Sourcing
                             </div>
-                            <span className="text-[10px] bg-gold-leaf text-white px-2 py-0.5 rounded font-bold uppercase tracking-widest font-mono">ASIN VERIFIED</span>
+                            <span className="text-[9px] text-emerald-550 font-bold uppercase tracking-widest font-mono">In Stock</span>
                           </div>
 
                           <p className="font-sans text-xs text-opacity-80 leading-relaxed font-light">
-                            This exclusive design is available for purchase on global Amazon stores. Instantly connect with reliable sellers, official Amazon warranties, and fast free shipping with our curated link.
+                            This design is available for purchase on Amazon. Clicking below takes you to its official listing where you can place your order with standard warranties and fast shipping.
                           </p>
 
                           <a 
@@ -1033,14 +1017,14 @@ export default function App() {
                             target="_blank" 
                             rel="sponsored nofollow"
                             referrerPolicy="no-referrer"
-                            className="w-full bg-charcoal hover:bg-gold-leaf text-sand hover:text-white font-sans text-xs font-bold tracking-widest py-4.5 rounded uppercase flex justify-center items-center gap-2.5 transition-all outline-none duration-300 text-center shadow-md shadow-black/10 transition-colors animate-pulse"
+                            className="w-full bg-charcoal hover:bg-neutral-900 text-sand hover:text-white dark:bg-neutral-200 dark:hover:bg-neutral-300 dark:text-charcoal font-sans text-xs font-bold tracking-widest py-4 rounded uppercase flex justify-center items-center gap-2.5 transition-all outline-none duration-300 text-center shadow-md shadow-black/10 transition-colors"
                           >
-                            GO TO AMAZON TO BUY <ExternalLink className="w-4 h-4 text-gold-leaf" />
+                            GO TO AMAZON TO BUY <ExternalLink className="w-4 h-4 opacity-75" />
                           </a>
 
-                          <div className="flex items-center justify-between text-[10px] text-muted-gray uppercase tracking-widest font-mono border-t border-neutral-500/10 pt-3">
-                            <span className="flex items-center gap-1"><ShieldCheck className="w-3.5 h-3.5 text-gold-leaf" /> 100% Secure Payment</span>
-                            <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-gold-leaf" /> Prime Shipping</span>
+                          <div className="flex items-center justify-between text-[9px] text-muted-gray uppercase tracking-widest font-mono border-t border-neutral-500/10 pt-3">
+                            <span className="flex items-center gap-1">Official Warranties</span>
+                            <span className="flex items-center gap-1">Prime Shipping</span>
                           </div>
                         </div>
 

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Heart, ExternalLink, Sparkles, ShieldCheck } from "lucide-react";
+import { Heart, ExternalLink, Sparkles } from "lucide-react";
 import { Product } from "../types";
 
 interface ProductCardProps {
@@ -68,17 +68,12 @@ export function ProductCard({
           referrerPolicy="no-referrer"
         />
 
-        {/* Dynamic SEO Pinterest tags preview (For testing dynamic tags) */}
-        {product.pinterestMetadata && (
+        {/* Visual tag overlay */}
+        {product.isNewArrival && (
           <div className="absolute top-3 left-3 flex flex-col gap-1.5 pointer-events-none z-10">
-            <span className="bg-[#111] text-neutral-200 font-mono text-[8px] px-2 py-1 rounded tracking-wide font-extrabold shadow uppercase">
-              ASIN: {product.asin}
+            <span className="bg-neutral-850/90 text-white font-sans text-[8px] px-2.5 py-1 rounded tracking-widest font-bold shadow uppercase">
+              TRENDING
             </span>
-            {product.isNewArrival && (
-              <span className="bg-neutral-800 text-white font-sans text-[8px] px-2 py-1 rounded tracking-widest font-bold shadow uppercase">
-                TRENDING
-              </span>
-            )}
           </div>
         )}
 
@@ -94,11 +89,6 @@ export function ProductCard({
         >
           <Heart className={`w-4 h-4 transition-colors ${isSaved ? "fill-neutral-500 text-neutral-500" : "text-current"}`} />
         </button>
-
-        {/* Overlay subtle disclosure on hover */}
-        <div className="absolute bottom-2 inset-x-2 bg-black/75 text-[8.5px] font-sans tracking-wide text-neutral-300 px-2 py-1.5 rounded text-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-          * Sponsored. As an Amazon Associate I earn commissions.
-        </div>
       </div>
 
       {/* Product Information Card Content Block */}
@@ -152,9 +142,9 @@ export function ProductCard({
             VIEW ON AMAZON <ExternalLink className="w-3.5 h-3.5 text-neutral-400" />
           </button>
 
-          <div className="flex justify-between items-center text-[8px] text-neutral-400 mt-2.5 uppercase tracking-widest font-mono">
-            <span className="flex items-center gap-0.5">
-              <ShieldCheck className="w-3 h-3 text-neutral-500" /> Secure Cloaked Connection
+          <div className="flex justify-between items-center text-[8px] text-neutral-450 mt-2.5 uppercase tracking-widest font-mono">
+            <span>
+              Prime Available
             </span>
             <span>Only 3 Left</span>
           </div>

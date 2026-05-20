@@ -1,0 +1,259 @@
+[
+  {
+    "id": "minimalist-led-desk-lamp",
+    "asin": "B0895Z9RKJ",
+    "name": "Minimalist LED Desk Lamp with Wireless Charger",
+    "designer": "LuminaZen",
+    "category": "Lighting",
+    "description": "Align your focus and clarify your workspace. A sleek, glare-free light combined with integrated wireless charging to keep clutter at bay.",
+    "longDescription": "This elegant minimalist desk lamp is designed to elevate your daily focus. With five brightness levels, customizable color temperatures, and an integrated fast wireless charger at its solid base, it delivers gentle illumination that reduces eye strain while maintaining a clean, wire-free desk surface.",
+    "imageUrl": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=600",
+    "colorSwatches": [
+      {
+        "name": "Matte White",
+        "value": "#FFFFFF",
+        "images": [
+          "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?auto=format&fit=crop&q=80&w=600"
+        ]
+      },
+      {
+        "name": "Satin Black",
+        "value": "#1A1A1A",
+        "images": [
+          "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&q=80&w=600"
+        ]
+      }
+    ],
+    "specifications": [
+      "Integrated 10W wireless charging pad",
+      "5 brightness levels & 5 color modes",
+      "Flicker-free eye protection diffusion",
+      "Auto-off timer function (30/60 min)"
+    ]
+  },
+  {
+    "id": "under-desk-cable-tray",
+    "asin": "B08XMS7K9B",
+    "name": "Under Desk Cable Management Tray - Black Metal",
+    "designer": "ZenWorkspace",
+    "category": "Office",
+    "description": "Clear the mental noise of tangled wires. Tuck away power strips and cords beneath your desk for an unobstructed, serene workspace.",
+    "longDescription": "Tangled cords disrupt mental focus. This heavy-duty black metal under-desk tray mounts securely to hold power strips, adapters, and excess cables, keeping your floors clean and your workspace free of visual distractions.",
+    "imageUrl": "https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?auto=format&fit=crop&q=80&w=600",
+    "colorSwatches": [
+      {
+        "name": "Black Metal",
+        "value": "#151515",
+        "images": [
+          "https://images.unsplash.com/photo-1585776245991-cf89dd7fc73a?auto=format&fit=crop&q=80&w=600"
+        ]
+      }
+    ],
+    "specifications": [
+      "Thick commercial-grade steel construction",
+      "Open airflow design prevents heat buildup",
+      "Includes wire management ties and mounting screws",
+      "Dimensions: 17\" L x 6.2\" W x 4.5\" H"
+    ]
+  },
+  {
+    "id": "lumbar-support-pillow",
+    "asin": "B07H9YKG89",
+    "name": "Ergonomic Memory Foam Lumbar Support Pillow",
+    "designer": "BodyZen",
+    "category": "Office",
+    "description": "Restore postural alignment and invite ease into your body. Designed to support your lower spine so your mind can remain clear and present.",
+    "longDescription": "A healthy posture breeds a quiet mind. Crafted from premium density memory foam, this ergonomic lumbar cushion contours to your lower back, alleviating tension during long sitting sessions so you can stay fully present in your creative zone.",
+    "imageUrl": "https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&q=80&w=600",
+    "colorSwatches": [
+      {
+        "name": "Charcoal Black",
+        "value": "#2A2A2A",
+        "images": [
+          "https://images.unsplash.com/photo-1592078615290-033ee584e267?auto=format&fit=crop&q=80&w=600"
+        ]
+      }
+    ],
+    "specifications": [
+      "100% pure high-density orthopedic memory foam",
+      "Breathable, removable, and washable 3D mesh cover",
+      "Adjustable secure straps preventing shifting",
+      "Recommended by physical therapists for spine alignment"
+    ]
+  },
+  {
+    "id": "wood-monitor-riser",
+    "asin": "B086W6Y9S6",
+    "name": "Monitor Stand Riser with Solid Wood & Metal Legs",
+    "designer": "TimberZen",
+    "category": "Office",
+    "description": "Elevate your perspective and free your desk space. Bring your screen to eye level while storing keyboards underneath for a peaceful work environment.",
+    "longDescription": "Improve your physical view and workspace efficiency. Crafted with a premium solid wood top and sleek matte steel legs, this riser supports heavy monitors or laptops while creating extra storage beneath for a clean, minimalist footprint.",
+    "imageUrl": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=600",
+    "colorSwatches": [
+      {
+        "name": "Natural Walnut",
+        "value": "#5C4033",
+        "images": [
+          "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80&w=600"
+        ]
+      }
+    ],
+    "specifications": [
+      "Solid sustainable hardwood tabletop coating",
+      "Heavy-duty powder coated structural steel legs",
+      "Anti-slip protective rubber undersupports",
+      "Supports weight limits up to 80 lbs"
+    ]
+  },
+  {
+    "id": "acoustic-wall-panels",
+    "asin": "B076H9SSTW",
+    "name": "Acoustic Wall Panels - Hexagon Sound Proofing",
+    "designer": "AuraZen",
+    "category": "Office",
+    "description": "Filter out external chaos and nurture deep focus. Geometric felt tiles that absorb ambient noise to cultivate a quiet, contemplative atmosphere.",
+    "longDescription": "Protect your inner focus. These acoustic wall panels reduce echoes and block distracting background frequencies. Their elegant hexagonal silhouette doubles as customizable, high-end geometric wall art.",
+    "imageUrl": "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=600",
+    "colorSwatches": [
+      {
+        "name": "Slate Grey",
+        "value": "#7A7A7A",
+        "images": [
+          "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&q=80&w=600"
+        ]
+      }
+    ],
+    "specifications": [
+      "100% polyester fiber high-density sound dampening",
+      "Formaldehyde-free and odor-free certified",
+      "Beveled edge geometric design arrays",
+      "Pack of 12 soundproof modular tiles"
+    ]
+  },
+  {
+    "id": "magnetic-key-holder",
+    "asin": "B07S7Y8R6N",
+    "name": "Magnetic Key Holder for Wall - Zen Style",
+    "designer": "EntryZen",
+    "category": "Home",
+    "description": "A dedicated sanctuary for your daily essentials. Let go of the frantic search for keys with a seamless, floating magnetic landing strip.",
+    "longDescription": "Start and end your day with peace. This elegant, wall-mounted wooden block uses powerful rare-earth magnets behind the surface to hold keys invisibly, removing messy hooks and clutter from your entryway.",
+    "imageUrl": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=600",
+    "colorSwatches": [
+      {
+        "name": "Dark Oak",
+        "value": "#42281D",
+        "images": [
+          "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=600"
+        ]
+      }
+    ],
+    "specifications": [
+      "Solid natural oak with rich wood grains",
+      "Strong hidden neodymium magnetic array",
+      "Damage-free mounting adhesive backing",
+      "Holds up to 3 standard key rings easily"
+    ]
+  },
+  {
+    "id": "bamboo-monitor-stand",
+    "asin": "B07PGL2N7J",
+    "name": "Bamboo Monitor Stand with Organizer Drawers",
+    "designer": "OrganizeZen",
+    "category": "Home",
+    "description": "Integrate organic warmth and structured order. A beautiful sustainable riser featuring slots and drawer dividers to compartmentalize mental and physical task elements.",
+    "longDescription": "Bring sustainable harmony to your desk. Hand-built from eco-friendly bamboo, this monitor stand raises your screen while offering built-in drawer organizers, phone holder slots, and cup recesses to hold items neatly in place.",
+    "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=600",
+    "colorSwatches": [
+      {
+        "name": "Natural Bamboo",
+        "value": "#D2B48C",
+        "images": [
+          "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&q=80&w=600"
+        ]
+      }
+    ],
+    "specifications": [
+      "100% natural, eco-friendly bamboo",
+      "2 sliding drawers with customizable dividers",
+      "Built-in phone slot and cup indentation",
+      "Sturdy layout supporting up to 80 lbs"
+    ]
+  },
+  {
+    "id": "desk-organizer-set",
+    "asin": "B01N6S06S2",
+    "name": "Black Mesh Desk Organizer Set - 6 Pieces",
+    "designer": "DeskZen",
+    "category": "Office",
+    "description": "Bring structured calm to desktop papers. A coordinated 6-piece mesh set that keeps critical tools neatly aligned and within effortless reach.",
+    "longDescription": "Organize your thoughts by organizing your workspace. This matching 6-piece metal mesh organizer set includes document trays, pen holders, and sticky note containers to align all desk accessories, eliminating clutter and promoting daily focus.",
+    "imageUrl": "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=600",
+    "colorSwatches": [
+      {
+        "name": "Matte Black",
+        "value": "#1C1C1C",
+        "images": [
+          "https://images.unsplash.com/photo-1513151233558-d860c5398176?auto=format&fit=crop&q=80&w=600"
+        ]
+      }
+    ],
+    "specifications": [
+      "Mesh wire metal scratch-resistant frames",
+      "Coordinated modern design system set",
+      "Includes: Paper tray, sticky note cup, letter sorter, pencil holder, business card stand, wastebasket",
+      "Nonslip rubber protective bottom padding"
+    ]
+  },
+  {
+    "id": "smart-rgb-floor-lamp",
+    "asin": "B097R7C6S7",
+    "name": "Smart RGB Floor Lamp - Modern Corner Light",
+    "designer": "LightZen",
+    "category": "Lighting",
+    "description": "Set the emotional tone of your sanctuary. A tall, indirect modern corner lamp designed to wash walls in calming, customizable ambient light.",
+    "longDescription": "Transform your room's atmosphere with indirect, diffuse lighting. This tall corner floor lamp stands out of sight while offering smart customizable colors, dimmable controls, and soothing lighting schemes, creating the perfect backdrop for evening reflection.",
+    "imageUrl": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&q=80&w=600",
+    "colorSwatches": [
+      {
+        "name": "Satin Aluminum",
+        "value": "#B0C4DE",
+        "images": [
+          "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?auto=format&fit=crop&q=80&w=600"
+        ]
+      }
+    ],
+    "specifications": [
+      "Sleek structural space-saving corner profile",
+      "Smart app integration with voice assistant compatibility",
+      "16 million colors & warm/cool white ranges",
+      "Height: 56.5 inches"
+    ]
+  },
+  {
+    "id": "felt-desk-pad",
+    "asin": "B08PC7SGFW",
+    "name": "Felt Desk Pad - Large Anti-Slip Mouse Pad",
+    "designer": "PadZen",
+    "category": "Office",
+    "description": "Define your working boundary with tactile warmth. Soft anti-slip felt that anchors your desk layout while providing a comfortable, cushioned zone of productivity.",
+    "longDescription": "Add structure to your desk space. Made from soft, thick synthetic felt, this desk pad creates a defined area for your keyboard, mouse, and sketchpad. It cushions your wrists and keeps your workspace quiet by muffling daily clatter.",
+    "imageUrl": "https://images.unsplash.com/photo-1632292224971-0d45778b3002?auto=format&fit=crop&q=80&w=600",
+    "colorSwatches": [
+      {
+        "name": "Heather Grey",
+        "value": "#808080",
+        "images": [
+          "https://images.unsplash.com/photo-1632292224971-0d45778b3002?auto=format&fit=crop&q=80&w=600"
+        ]
+      }
+    ],
+    "specifications": [
+      "Soft, thick synthetic felt cushioning",
+      "Non-slip backing prevents sliding",
+      "Muffles laptop sounds & protects desktop surface",
+      "Dimensions: 31.5\" W x 15.7\" H x 0.12\" Thickness"
+    ]
+  }
+]

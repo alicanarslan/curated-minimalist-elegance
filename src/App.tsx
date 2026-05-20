@@ -89,9 +89,9 @@ export default function App() {
   const [activeCategory, setActiveCategory] = useState<string>("All");
   
   // Interactive features states
-  const [savedProductIds, setSavedProductIds] = useState<string[]>(["lounge-chair-no-5", "orbital-lamp"]);
+  const [savedProductIds, setSavedProductIds] = useState<string[]>(["minimalist-led-desk-lamp", "felt-desk-pad"]);
   const [colorSelections, setColorSelections] = useState<Record<string, string>>({
-    "velvet-accent-chair": "Emerald"
+    "minimalist-led-desk-lamp": "Matte White"
   });
   const [detailActiveImageIndex, setDetailActiveImageIndex] = useState<number>(0);
   const [toastMessage, setToastMessage] = useState<string | null>(null);

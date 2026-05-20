@@ -52,7 +52,7 @@ export const HomeTab: React.FC<HomeTabProps> = ({
           {/* Rich ambient backing gradient */}
           <div className="absolute inset-x-0 bottom-0 h-96 bg-gradient-to-t from-charcoal via-charcoal/40 to-transparent z-10" />
 
-          {/* HOTSPOT PIN A: Boucle Armchair (velvet-accent-chair or similar) */}
+          {/* HOTSPOT PIN A: Minimalist LED Desk Lamp */}
           <div 
             className="absolute group z-20"
             style={{ top: "64%", left: "32%" }}
@@ -62,14 +62,14 @@ export const HomeTab: React.FC<HomeTabProps> = ({
               <div className="absolute -inset-1.5 w-6 h-6 rounded-full bg-gold-leaf/40 animate-ping" />
               {/* Inner pin point */}
               <button 
-                onClick={() => navigateToProduct("velvet-accent-chair")}
+                onClick={() => navigateToProduct("minimalist-led-desk-lamp")}
                 className="relative w-3.5 h-3.5 rounded-full bg-gold-leaf border-2 border-white cursor-pointer shadow-md focus:outline-none"
-                aria-label="Boucle Chair Hotspot"
+                aria-label="Desk Lamp Hotspot"
               />
               {/* Card Tooltip */}
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 xs:max-w-xs w-48 bg-charcoal/90 backdrop-blur-md rounded border border-gold-leaf/30 text-sand p-2.5 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 scale-95 group-hover:scale-100 shadow-xl">
-                <h4 className="font-serif text-xs font-bold leading-tight">Velvet Accent Chair</h4>
-                <p className="font-sans text-[10px] text-gold-leaf font-bold mt-0.5"><span className="text-white font-normal text-opacity-70">Atelier Reserve</span></p>
+                <h4 className="font-serif text-xs font-bold leading-tight">Minimalist LED Desk Lamp</h4>
+                <p className="font-sans text-[10px] text-gold-leaf font-bold mt-0.5"><span className="text-white font-normal text-opacity-70">LuminaZen</span></p>
                 <button className="text-[9px] font-sans font-bold flex items-center gap-1 mt-1.5 uppercase text-gold-leaf underline">
                   View Now <ChevronRight className="w-3 h-3" />
                 </button>
@@ -77,7 +77,7 @@ export const HomeTab: React.FC<HomeTabProps> = ({
             </div>
           </div>
 
-          {/* HOTSPOT PIN B: Minimalist Floor Lamp */}
+          {/* HOTSPOT PIN B: Smart RGB Floor Lamp */}
           <div 
             className="absolute group z-20"
             style={{ top: "36%", left: "62%" }}
@@ -85,13 +85,13 @@ export const HomeTab: React.FC<HomeTabProps> = ({
             <div className="relative">
               <div className="absolute -inset-1.5 w-6 h-6 rounded-full bg-gold-leaf/40 animate-ping" />
               <button 
-                onClick={() => navigateToProduct("minimalist-floor-lamp")}
+                onClick={() => navigateToProduct("smart-rgb-floor-lamp")}
                 className="relative w-3.5 h-3.5 rounded-full bg-gold-leaf border-2 border-white cursor-pointer shadow-md focus:outline-none"
-                aria-label="Lumina Floor Lamp Hotspot"
+                aria-label="Floor Lamp Hotspot"
               />
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-48 bg-charcoal/90 backdrop-blur-md rounded border border-gold-leaf/30 text-sand p-2.5 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 scale-95 group-hover:scale-100 shadow-xl">
-                <h4 className="font-serif text-xs font-bold leading-tight">Minimalist Floor Lamp</h4>
-                <p className="font-sans text-[10px] text-gold-leaf font-bold mt-0.5"><span className="text-white font-normal text-opacity-70">Lumina Brass</span></p>
+                <h4 className="font-serif text-xs font-bold leading-tight">Smart RGB Floor Lamp</h4>
+                <p className="font-sans text-[10px] text-gold-leaf font-bold mt-0.5"><span className="text-white font-normal text-opacity-70">LightZen</span></p>
                 <button className="text-[9px] font-sans font-bold flex items-center gap-1 mt-1.5 uppercase text-gold-leaf underline">
                   View Now <ChevronRight className="w-3 h-3" />
                 </button>
@@ -99,7 +99,7 @@ export const HomeTab: React.FC<HomeTabProps> = ({
             </div>
           </div>
 
-          {/* HOTSPOT PIN C: Boucle Armchair */}
+          {/* HOTSPOT PIN C: Felt Desk Pad */}
           <div 
             className="absolute group z-20"
             style={{ top: "54%", left: "14%" }}
@@ -107,13 +107,13 @@ export const HomeTab: React.FC<HomeTabProps> = ({
             <div className="relative">
               <div className="absolute -inset-1.5 w-6 h-6 rounded-full bg-gold-leaf/40 animate-ping" />
               <button 
-                onClick={() => navigateToProduct("boucle-armchair")}
+                onClick={() => navigateToProduct("felt-desk-pad")}
                 className="relative w-3.5 h-3.5 rounded-full bg-gold-leaf border-2 border-white cursor-pointer shadow-md focus:outline-none"
-                aria-label="Teak lounge Hotspot"
+                aria-label="Desk Pad Hotspot"
               />
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-48 bg-charcoal/90 backdrop-blur-md rounded border border-gold-leaf/30 text-sand p-2.5 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-300 scale-95 group-hover:scale-100 shadow-xl">
-                <h4 className="font-serif text-xs font-bold leading-tight">Statement Space Chair</h4>
-                <p className="font-sans text-[10px] text-gold-leaf font-bold mt-0.5"><span className="text-white font-normal text-opacity-70">Boucle Atelier</span></p>
+                <h4 className="font-serif text-xs font-bold leading-tight">Felt Desk Pad</h4>
+                <p className="font-sans text-[10px] text-gold-leaf font-bold mt-0.5"><span className="text-white font-normal text-opacity-70">PadZen</span></p>
                 <button className="text-[9px] font-sans font-bold flex items-center gap-1 mt-1.5 uppercase text-gold-leaf underline">
                   View Now <ChevronRight className="w-3 h-3" />
                 </button>

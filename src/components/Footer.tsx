@@ -44,6 +44,12 @@ export const Footer: React.FC<FooterProps> = ({
             >
               <PinterestIcon className="w-4 h-4" /> Follow us on Pinterest
             </a>
+            <a 
+              href="mailto:alicanarslan.dev@gmail.com"
+              className="text-[11px] font-mono hover:text-gold-leaf transition-colors mt-2 self-start block underline"
+            >
+              alicanarslan.dev@gmail.com
+            </a>
           </div>
         </div>
 
